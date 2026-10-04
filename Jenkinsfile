@@ -17,7 +17,7 @@ pipeline {
                 sh '''
                 docker stop student-crud-container || true
                 docker rm student-crud-container || true
-                docker run -d -p 8080:3000 --name student-crud-container student-crud-app:latest
+                docker run -d -p 3001:3000 --name student-crud-container student-crud-app:latest
                 '''
             }
         }
